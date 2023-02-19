@@ -1,0 +1,28 @@
+#include <iostream>
+#include "Gate.h"
+
+
+class RSFlipFlop{
+private:
+    int Q = 0;
+    int Q_bar = 1;
+
+public:
+    void update(int R, int S){
+        assert(R + S < 2);
+        if (R == 1) {Q = 1; Q_bar = 0;};
+        if (S == 1) {Q = 0; Q_bar = 1;};
+    }
+};
+
+
+int main() {
+    bool a = !1;
+    std::cout << a << std::endl;
+    return 0;
+}
+
+
+
+
+
